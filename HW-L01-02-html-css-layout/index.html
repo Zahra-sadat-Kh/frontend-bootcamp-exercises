@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 【ＴIN　ＴIN＇ｓ　Ｐｈｏｔｏ　Ｇａｌｌｅｒｙ】 </title>
+
+    <style>
+        * {margin: 0;
+           padding:0;
+        }
+
+        body {
+            font-family: cursive;
+            background-color: #daf3ff;
+            padding: 15px;
+        }
+
+        #MainTitle {
+            color: rgb(191, 72, 26);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #SubTitle {
+            color: rgb(132, 77, 11);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .line {
+            height: 4px;
+            background-color: rgb(5, 8, 59);
+            margin-top:17px; margin-bottom: 17px;
+        }
+
+        .gallery {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: #ccc;
+            width: 290px; height: 190px;
+            overflow: hidden;
+            position:relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+            /* بک‌گراند خالی برای تصویر کامل */
+            background: #eee;
+            transition: transform 0.3s;
+        }
+
+        .description {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 13px;
+            transition: all 0.3s;
+            /* برای جلوگیری از مشکل بیرون زدن متن */
+            box-sizing: border-box;
+}
+
+        /* هاور مربوط به تصاویر */
+        .gallery-item:hover img {
+            transform: scale(1.05)
+        }
+
+        .gallery-item:hover .description {
+            bottom:0; background-color: #0c065c92;
+        }
+
+        /* تغییر چیدمان تصاویر باتوجه به سایز صفحه‌نمایش دسکتاپ یا موبایل */
+        @media only screen and (max-width:768px){
+            .gallery-item {
+                width: 48%;
+                height: 160px;
+            }
+        }
+
+        @media only screen and (max-width:480px){
+            .gallery-item {
+                width: 90%;
+                height: 140px
+            }
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <h1 id="MainTitle"> ◀︎ TIN TIN's Photo Gallery ▶︎ </h1>
+    
+    <div class="line"></div>
+    
+    <h2 id="SubTitle"> 🔻Characters🔻 </h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://www.nzherald.co.nz/resizer/v2/LSFXPEZ2CNDI3HGR5XZ6YSWE2E.jpg?auth=ca4f2607f162b6fa6ad97b9e9f13a984dc6fe98ad09e1984a8b8769ddcaf8710&width=576&height=496&quality=70&smart=true" alt="عکس اول">
+            <div class="description"> 🟦Tintin: He is a young, multitalented reporter with a distinctive quiff hairstyle who travels the world with his dog. </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.dribbble.com/userupload/16105575/file/original-155632701f92f7ab5f0945ee416600d5.jpg?resize=1600x1200" alt="عکس دوم">
+            <div class="description"> 🟩Professor Cuthbert Calculus: A character from the Tintin comics. He is a friend of Tintin and is known for his absentmindedness and inventions. Calculus is often depicted as being hard of hearing, leading to misunderstandings and humorous situations. </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn001.tintin.com/public/tintin/img/characters/milou/milou@2x.png" alt="عکس سوم">
+            <div class="description"> 🟧Snowy: He is a fictional character in The Adventures of Tintin, the comics series by Belgian cartoonist Hergé. Snowy is a white Wire Fox Terrier who is a companion to Tintin, the series' protagonist. </div>   
+        </div>
+            <div class="gallery-item">
+            <img src="https://cdn001.tintin.com/public/tintin/img/characters/bianca-castafiore/bianca-castafiore@2x.png" alt="عکس چهارم">
+            <div class="description"> 🟥Bianca Castafiore: Bianca Castafiore, nicknamed the "Milanese Nightingale", is a fictional character in The Adventures of Tintin, the comics series by Belgian cartoonist Hergé. </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigb0ClkLMrDtDlAOixmeUKe6P9hvtOeK5aGmGl5n-2Ydhu5bNr-aYXITOivS7zAzKZtOJxoNz2sE1JLwQk_s2HkrADEq-o-7zIlnBR68_o997_amIXjPMdzbJc2X4Sych98zDBH5Ql-u5r/s1600/Mu%CC%88ller.png" alt="عکس پنجم">
+            <div class="description"> ⬜J.W. Müller: Whether sporting a small goatee or fully bearded, under diverse disguises and multiple identities, J.W. Müller has played a part in the biggest events of the twentieth century, always batting for the wrong side. </div>
+        </div>           
+        <div class="gallery-item">
+            <img src="https://cdn001.tintin.com/public/tintin/img/characters/seraphin-lampion/seraphin-lampion@2x.png" alt="عکس ششم">
+            <div class="description"> 🟫Rastapopoulos: Genius of evil, enemy of good, great shark swimming in the troubled international waters, he found in Tintin "the impediment to dancing in circles" that never ceases to irritate him.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn001.tintin.com/public/tintin/img/static/rascar-capac/rascar-capac.png" alt="عکس هفتم">
+            <div class="description"> 🟨Rascar Capac:Inca Rascar Capac inspired by the name of Incas who ruled Peru and bearing the names of "Manco-Capac", "Maytac-Capac", or "Huascar". </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/736x/87/c0/f3/87c0f3c4b7f237a0b3422421f1acb8a7.jpg" alt="عکس هشتم">
+            <div class="description"> 🟪Captain Archibald Haddock: A character in the comic book series The Adventures of Tintin. He is Tintin's best friend.</div>
+        </div>
+    </div>
+</body>
+</html>
